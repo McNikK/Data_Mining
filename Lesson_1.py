@@ -42,7 +42,6 @@ class Parser5ka:
 
     def run(self):
         for products in self.parse(self.start_url):
-            print(products)
             for product in products:
                 file_path = Path(__file__).parent.joinpath(f'{product["id"]}.json')
                 self.save_file(file_path, product)
